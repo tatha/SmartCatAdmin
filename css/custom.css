@@ -1,0 +1,56 @@
+html {height: 100%;}
+body {
+	background: #fff;
+	-webkit-font-smoothing: antialiased;
+	overflow-x:	hidden;
+	background: url(../images/patterns/5.png) repeat;
+	height: 100%;
+}
+
+.sidenav {width: 100%; margin-left:0;}
+
+/* General */
+
+.table.left thead th, .table.left tbody td {
+	text-align: left;
+}
+
+/* Login & Register */
+
+#keepLoged {
+	width: 20px;
+	margin-top: 18px;
+}
+
+.registerContainer {
+	width: 80%;
+	left: 7.5%;
+	margin: 0px auto;
+	top: 100px;
+}
+
+.loginContainer.registerContainer:after, .loginContainer.registerContainer:before {
+	border:0;
+}
+
+#registerForm label .icon16 {
+	position: absolute;
+	right: 0;
+	bottom: -26px;
+}
+
+#registerForm .form-row {
+	margin-top: 15px;
+}
+
+.actnLink:hover {
+	text-decoration:none;
+}
+
+.dialog.ui-dialog-content.ui-widget-content table td {
+	padding:5px;
+}
+.dialog.ui-dialog-content.ui-widget-content input[type="text"],
+.dialog.ui-dialog-content.ui-widget-content select {
+	margin-bottom:0px;
+}
