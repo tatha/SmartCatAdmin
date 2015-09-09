@@ -8,19 +8,15 @@
 ** This page contain class to connect database
 ************************************************
 */
-
 /*
 	MySQLi Database class
 */
 require_once('config.php.inc');
 class db {
-	
 	var $conn;
-	
 	function __construct() {
 		session_start();
 	}
-	
 	function con_db() {
 		$this->conn = new mysqli(HOSTNAME, DB_USER, DB_PASS, DBNAME);
 		if($this->conn->connect_errno) {
@@ -30,7 +26,6 @@ class db {
 			return $this->conn;
 		}
 	}
-	
 	function RealEscape($data) {
 		if(is_array($data)) {
 			foreach($data as $key=>$val)
@@ -46,6 +41,5 @@ class db {
 		}
 		return $data;
 	}
-	
 }
 ?>

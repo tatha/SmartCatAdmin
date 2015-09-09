@@ -16,7 +16,7 @@
 define('HOSTNAME','localhost');
 define('DB_USER','root');
 define('DB_PASS','');
-define('DBNAME','supr_admin');
+define('DBNAME','smartcatadmin');
 
 //max number of failed password in loging
 define('MAX_FAILED_PASSWD','5');
@@ -26,11 +26,11 @@ define('MAX_INACTIVE_TIME','36000');
 define('MAX_INACTIVE_TIME_SU','36000');
 
 //Data directory Root
-define('APP_ROOT', 'http://'.$_SERVER['SERVER_NAME'].'/supr_admin_mods/');
-define('DIR_ROOT', $_SERVER['DOCUMENT_ROOT'].'/supr_admin_mods/');
+define('APP_ROOT', 'http://'.$_SERVER['SERVER_NAME'].'/smartcatadmin/');
+define('DIR_ROOT', $_SERVER['DOCUMENT_ROOT'].'/smartcatadmin/');
 
 //PREFIX
-define('DB_PREFIX', 'sa');
+define('DB_PREFIX', 'sca');
 
 //Date Variable
 define('NULL_DATE', '0000-00-00 00:00:00');
