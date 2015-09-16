@@ -29,7 +29,20 @@
 <!-- End .heading--> 
 <!--Content Goes Here-->
 
-
+<div class="row-fluid">
+  <div class="box">
+  <div class="title">
+    <h4 class="clearfix"> <span class="left">Box</span>
+    <div class="rightBox">
+    </div>
+    </h4>
+    <a href="#" class="minimize" style="display: none;">Minimize</a>
+    </div>
+    <div class="content">
+    
+    </div>
+  </div>
+</div>
 
 <!--Content End Here-->
 </div>
