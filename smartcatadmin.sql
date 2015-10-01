@@ -15,10 +15,10 @@ Date: 2014-12-05 18:06:53
 
 SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
--- Table structure for `sa_menu`
+-- Table structure for `sca_menu`
 -- ----------------------------
-DROP TABLE IF EXISTS `sa_menu`;
-CREATE TABLE `sa_menu` (
+DROP TABLE IF EXISTS `sca_menu`;
+CREATE TABLE `sca_menu` (
   `m_id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `m_name` varchar(50) DEFAULT NULL,
   `m_url` varchar(50) DEFAULT NULL,
@@ -35,18 +35,18 @@ CREATE TABLE `sa_menu` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of sa_menu
+-- Records of sca_menu
 -- ----------------------------
-INSERT INTO `sa_menu` VALUES ('1', 'Dashboard', 'dashboard.html', 'icomoon-icon-home-8', '0', '1', '0', 'A', 'Y', null, null, null);
-INSERT INTO `sa_menu` VALUES ('2', 'SU Control Panel', '#', 'iconic-icon-equalizer', '0', '2', '1', 'A', 'Y', '', '0000-00-00 00:00:00', '');
-INSERT INTO `sa_menu` VALUES ('3', 'User Management', 'manage_user.html', 'icomoon-icon-user-4', '2', '1', '0', 'A', 'Y', '', '0000-00-00 00:00:00', '');
-INSERT INTO `sa_menu` VALUES ('4', 'User Permission', 'manage_permission.html', 'icomoon-icon-license', '2', '2', '0', 'A', 'Y', '', '0000-00-00 00:00:00', '');
+INSERT INTO `sca_menu` VALUES ('1', 'Dashboard', 'dashboard.html', 'icomoon-icon-home-8', '0', '1', '0', 'A', 'Y', null, null, null);
+INSERT INTO `sca_menu` VALUES ('2', 'SU Control Panel', '#', 'iconic-icon-equalizer', '0', '2', '1', 'A', 'Y', '', '0000-00-00 00:00:00', '');
+INSERT INTO `sca_menu` VALUES ('3', 'User Management', 'manage_user.html', 'icomoon-icon-user-4', '2', '1', '0', 'A', 'Y', '', '0000-00-00 00:00:00', '');
+INSERT INTO `sca_menu` VALUES ('4', 'User Permission', 'manage_permission.html', 'icomoon-icon-license', '2', '2', '0', 'A', 'Y', '', '0000-00-00 00:00:00', '');
 
 -- ----------------------------
--- Table structure for `sa_menu_perm`
+-- Table structure for `sca_menu_perm`
 -- ----------------------------
-DROP TABLE IF EXISTS `sa_menu_perm`;
-CREATE TABLE `sa_menu_perm` (
+DROP TABLE IF EXISTS `sca_menu_perm`;
+CREATE TABLE `sca_menu_perm` (
   `mp_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `mp_roleid` int(3) NOT NULL,
   `mp_menuid` int(3) NOT NULL,
@@ -62,18 +62,18 @@ CREATE TABLE `sa_menu_perm` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of sa_menu_perm
+-- Records of sca_menu_perm
 -- ----------------------------
-INSERT INTO `sa_menu_perm` VALUES ('1', '1', '1', '1', '0', '0', '0', null, null, null);
-INSERT INTO `sa_menu_perm` VALUES ('2', '1', '2', '1', '0', '0', '0', null, null, null);
-INSERT INTO `sa_menu_perm` VALUES ('3', '1', '3', '1', '0', '0', '0', null, null, null);
-INSERT INTO `sa_menu_perm` VALUES ('4', '1', '4', '1', '0', '0', '0', null, null, null);
+INSERT INTO `sca_menu_perm` VALUES ('1', '1', '1', '1', '0', '0', '0', null, null, null);
+INSERT INTO `sca_menu_perm` VALUES ('2', '1', '2', '1', '0', '0', '0', null, null, null);
+INSERT INTO `sca_menu_perm` VALUES ('3', '1', '3', '1', '0', '0', '0', null, null, null);
+INSERT INTO `sca_menu_perm` VALUES ('4', '1', '4', '1', '0', '0', '0', null, null, null);
 
 -- ----------------------------
--- Table structure for `sa_role`
+-- Table structure for `sca_role`
 -- ----------------------------
-DROP TABLE IF EXISTS `sa_role`;
-CREATE TABLE `sa_role` (
+DROP TABLE IF EXISTS `sca_role`;
+CREATE TABLE `sca_role` (
   `r_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `r_name` varchar(255) DEFAULT NULL,
   `r_status` enum('A','D') DEFAULT NULL,
@@ -84,15 +84,15 @@ CREATE TABLE `sa_role` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of sa_role
+-- Records of sca_role
 -- ----------------------------
-INSERT INTO `sa_role` VALUES ('1', 'Super Admin', 'A', null, null, null);
+INSERT INTO `sca_role` VALUES ('1', 'Super Admin', 'A', null, null, null);
 
 -- ----------------------------
--- Table structure for `sa_users`
+-- Table structure for `sca_users`
 -- ----------------------------
-DROP TABLE IF EXISTS `sa_users`;
-CREATE TABLE `sa_users` (
+DROP TABLE IF EXISTS `sca_users`;
+CREATE TABLE `sca_users` (
   `u_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `u_username` varchar(255) NOT NULL DEFAULT '',
   `u_fname` varchar(50) DEFAULT NULL,
@@ -110,6 +110,6 @@ CREATE TABLE `sa_users` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of sa_users
+-- Records of sca_users
 -- ----------------------------
-INSERT INTO `sa_users` VALUES ('1', 'sa', 'Tathagata', 'Basu', 'tathagatabasu.basu@gmail.com', '9831919772', '16ad5892d13a0b7c9220684e52a548b1', '1', null, 'A', '1', '2014-12-05 18:05:57', '127.0.0.1');
+INSERT INTO `sca_users` VALUES ('1', 'sa', 'Tathagata', 'Basu', 'tathagatabasu.basu@gmail.com', '9831919772', '16ad5892d13a0b7c9220684e52a548b1', '1', null, 'A', '1', '2014-12-05 18:05:57', '127.0.0.1');
