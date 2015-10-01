@@ -4,7 +4,7 @@
       <div class="container-fluid"> <a class="brand" href="dashboard.html">Smart <span class="slogan">Cat</span></a>
         <div class="nav-no-collapse">
           <ul class="nav">
-            <li class="active"><a href="dashboard.html"><span class="icon16 icomoon-icon-screen-2"></span> Dashboard</a></li>
+            <li><a href="dashboard.html"><span class="icon16 icomoon-icon-screen-2"></span> Dashboard</a></li>
             <!--<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="icon16 icomoon-icon-cog"></span> Settings <b class="caret"></b> </a>
               <ul class="dropdown-menu">
                 <li class="menu">
