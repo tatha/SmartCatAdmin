@@ -35,4 +35,7 @@ define('DB_PREFIX', 'sca');
 //Date Variable
 define('NULL_DATE', '0000-00-00 00:00:00');
 
+//Theme
+define('THEME', 'default');
+
 ?>

@@ -40,6 +40,9 @@
 <!-- Custom stylesheets ( Put your own changes here ) -->
 <link href="css/custom.css" rel="stylesheet" type="text/css" />
 
+<!-- Load Theme -->
+<link href="css/themes/<?=THEME?>.css" rel="stylesheet" type="text/css" />
+
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,6 +54,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114-precomposed.png" />
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72-precomposed.png" />
 <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57-precomposed.png" />
+
 
 <!-- javascript --> 
 <script  type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
