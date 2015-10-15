@@ -62,7 +62,7 @@ $resUser = $instUser->FetchUser('%');
 		if($arrUser['u_role']<>1) {
 	?>
       <tr>
-        <td><a href="javascript:void(0)" class="tip actnLink" id="edit_<?=$arrUser['u_id']?>"><?=$arrUser['u_username']?></a></td>
+        <td><?=$arrUser['u_username']?></td>
         <td><?=$arrUser['u_fname'].' '.$arrUser['u_lname']?></td>
         <td><?=$arrUser['u_email']?></td>
         <td><?=$arrUser['r_name']?></td>
