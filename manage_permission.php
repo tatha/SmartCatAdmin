@@ -30,7 +30,7 @@ if(isset($_REQUEST['r_id'])&&$_REQUEST['r_id']<>'') {
 <h3>Permission Management</h3>
 <ul class="breadcrumb">
   <li>You are here:</li>
-  <li> <a href="#" class="tip" title="back to dashboard"> <span class="icon16 icomoon-icon-screen-2"></span> </a> <span class="divider"> <span class="icon16 icomoon-icon-arrow-right-2"></span> </span> </li>
+  <li> <a href="dashboard.html" class="tip" title="Dashboard"> <span class="icon16 icomoon-icon-screen-2"></span> </a> <span class="divider"> <span class="icon16 icomoon-icon-arrow-right-2"></span> </span> </li>
   <li class="active">Permission Management</li>
 </ul>
 </div>
@@ -50,6 +50,8 @@ if(isset($_REQUEST['r_id'])&&$_REQUEST['r_id']<>'') {
       	<option value="">Select</option>
       	<?php
 		while($arrRole = $resRole->fetch_assoc()) {
+			//Hide Super Admin
+			if($arrRole['r_id']==1 && $_SESSION[DB_PREFIX]['r_id']<>1) { continue; }
 		?>
       	<option value="<?=$arrRole['r_id']?>" <?php if($_REQUEST['role']==$arrRole['r_id']) { ?>selected<?php } ?>><?=$arrRole['r_name']?></option>
         <?php
