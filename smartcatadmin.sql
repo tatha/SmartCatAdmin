@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
-Source Server Version : 50536
+Source Server Version : 50616
 Source Host           : localhost:3306
 Source Database       : smartcatadmin
 
 Target Server Type    : MYSQL
-Target Server Version : 50536
+Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-12-05 18:06:53
+Date: 2015-10-15 17:12:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -103,6 +103,8 @@ CREATE TABLE `sca_users` (
   `u_role` int(11) DEFAULT NULL,
   `u_secret` varchar(50) DEFAULT NULL,
   `u_status` enum('A','D') DEFAULT 'A',
+  `u_locked` enum('0','1') DEFAULT '0',
+  `u_failed_attempt` int(11) DEFAULT NULL,
   `u_update_by` int(11) DEFAULT NULL,
   `u_update_on` timestamp NULL DEFAULT NULL,
   `u_update_from` varchar(40) DEFAULT NULL,
@@ -112,4 +114,4 @@ CREATE TABLE `sca_users` (
 -- ----------------------------
 -- Records of sca_users
 -- ----------------------------
-INSERT INTO `sca_users` VALUES ('1', 'sa', 'Tathagata', 'Basu', 'tathagatabasu.basu@gmail.com', '9831919772', '16ad5892d13a0b7c9220684e52a548b1', '1', null, 'A', '1', '2014-12-05 18:05:57', '127.0.0.1');
+INSERT INTO `sca_users` VALUES ('1', 'sa', 'Tathagata', 'Basu', 'tathagatabasu.basu@gmail.com', '9831919772', '16ad5892d13a0b7c9220684e52a548b1', '1', null, 'A', '0', '0', '1', '2014-12-05 18:05:57', '127.0.0.1');

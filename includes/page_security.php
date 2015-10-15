@@ -15,6 +15,7 @@ $curPage = substr(trim(basename($_SERVER['PHP_SELF'])),0,-4);
 }*/
 switch($curPage) {
 	case 'login':
+	case 'logout':
 	case 'register':
 	case 'confirm':
 	case 'check-username': {
@@ -31,13 +32,18 @@ switch($curPage) {
 			//if session is not saved
 			header("Location:login.html");
 		} else {
-			/*if($_SESSION[DB_PREFIX]['r_id']=='3'||$_SESSION[DB_PREFIX]['r_id']=='4') {
-				if(!$instSys->CheckProfileCreation()) {
-					if($curPage<>'profile') {
-						header("Location:profile.html");
-					}
+			$pagePerm = $instAuth->CheckPagePerm($curPage.'.html');
+			if($pagePerm['mp_view']=='1') {
+				// View Access Granted
+			} else {
+				if($curPage=='profile' || $curPage=='change_password') {
+					//By Pass
+				} else {
+					header('HTTP/1.0 403 Forbidden');
+					header('Location:403.php');
+					echo "Access Denied"; exit;
 				}
-			}*/
+			}
 		}
 	}
 }
