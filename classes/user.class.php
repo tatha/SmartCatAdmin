@@ -34,7 +34,7 @@ class user extends db {
 	}
 	function SaveUser($data) {
 		if($data['u_id']=='') {
-			if($this->db->query("INSERT INTO ".DB_PREFIX."_users(u_id, u_username, u_fname, u_lname, u_email, u_contact, u_password, u_role, u_secret, u_status, u_update_by, u_update_on, u_update_from) VALUES('', '".$data['u_username']."', '".$data['u_fname']."', '".$data['u_lname']."', '".$data['u_email']."', '".$data['u_contact']."', '".md5($data['u_username'])."', '".$data['u_role']."', '', '', '".$_SESSION[DB_PREFIX]['u_id']."', '".date('Y-m-d H:i:s')."', '".$_SERVER['REMOTE_ADDR']."')")) {
+			if($this->db->query("INSERT INTO ".DB_PREFIX."_users(u_id, u_username, u_fname, u_lname, u_email, u_contact, u_password, u_role, u_secret, u_status, u_update_by, u_update_on, u_update_from) VALUES('', '".$data['u_username']."', '".$data['u_fname']."', '".$data['u_lname']."', '".$data['u_email']."', '".$data['u_contact']."', '".md5($data['u_username'])."', '".$data['u_role']."', '', '".$data['u_status']."', '".$_SESSION[DB_PREFIX]['u_id']."', '".date('Y-m-d H:i:s')."', '".$_SERVER['REMOTE_ADDR']."')")) {
 				return 1;
 			} else {
 				return 0;
