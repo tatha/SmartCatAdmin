@@ -67,7 +67,7 @@ class auth extends db {
 		header("Location:index.html");
 	}
 	function CheckPagePerm($pageURL) {
-		return $this->db->query("SELECT m.m_id, m.m_name, m.m_url, mp.mp_view FROM tc_menu AS m , tc_menu_perm AS mp WHERE mp.mp_menuid = m.m_id AND mp.mp_roleid = '".$_SESSION[DB_PREFIX]['r_id']."' AND m.m_url = '".$pageURL."' ORDER BY m.m_parent_id DESC")->fetch_assoc();
+		return $this->db->query("SELECT m.m_id, m.m_name, m.m_url, mp.mp_view FROM ".DB_PREFIX."_menu AS m, ".DB_PREFIX."_menu_perm AS mp WHERE mp.mp_menuid = m.m_id AND mp.mp_roleid = '".$_SESSION[DB_PREFIX]['r_id']."' AND m.m_url = '".$pageURL."' ORDER BY m.m_parent_id DESC")->fetch_assoc();
 	}
 }
 ?>
