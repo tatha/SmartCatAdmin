@@ -9,42 +9,64 @@ switch($data['action']) {
 		$arrUser = $instUser->GetUserDetail($data['u_id']);
 		$resRole = $instUser->FetchRole('A');
 ?>
-<div style="width:700px">
+<div>
+<style>
+#messageBox li {
+	margin:0;
+}
+#messageBox li label.error {
+	margin:0;
+}
+.alert {
+	padding:0px;
+	border:none;
+}
+</style>
+<div class="alert alert-error" id="messageBox"></div>
 <form name="userForm" id="userForm" action="" method="post">
 <input type="hidden" name="action" id="action" value="saveUser">
 <input type="hidden" name="u_id" id="u_id" value="<?=$arrUser['u_id']?>">
 <table width="100%" border="0">
   <tr>
-    <td style="vertical-align:top;"><strong>Username</strong></td>
+    <td style="vertical-align:top;"><strong>Username</strong><span class="required">*</span></td>
     <td style="vertical-align:top;"><strong>:</strong></td>
     <td colspan="4">
-    <input type="text" name="u_username" id="u_username" value="<?=$arrUser['u_username']?>" <?php if($arrUser['u_id']<>'') { ?>readonly<?php } ?>>
+    <input type="text" name="u_username" id="u_username" value="<?=$arrUser['u_username']?>" placeholder="Username" <?php if($arrUser['u_id']<>'') { ?>readonly<?php } ?>>
     </td>
   </tr>
   <tr>
-    <td style="vertical-align:top;"><strong>Name</strong></td>
+    <td style="vertical-align:top;"><strong>Name</strong><span class="required">*</span></td>
     <td style="vertical-align:top;"><strong>:</strong></td>
     <td colspan="4">
-    <input type="text" name="u_fname" id="u_fname" value="<?=$arrUser['u_fname']?>">
-    <input type="text" name="u_lname" id="u_lname" value="<?=$arrUser['u_lname']?>">
+    <input type="text" name="u_fname" id="u_fname" value="<?=$arrUser['u_fname']?>" placeholder="First Name">
+    <input type="text" name="u_lname" id="u_lname" value="<?=$arrUser['u_lname']?>" placeholder="Last Name">
     </td>
   </tr>
   <tr>
-    <td style="vertical-align:top;"><strong>Email ID</strong></td>
+    <td style="vertical-align:top;"><strong>Email ID</strong><span class="required">*</span></td>
     <td style="vertical-align:top;"><strong>:</strong></td>
     <td colspan="4">
-    <input type="text" name="u_email" id="u_email" value="<?=$arrUser['u_email']?>">
+    <input type="text" name="u_email" id="u_email" value="<?=$arrUser['u_email']?>" placeholder="E-mail">
     </td>
   </tr>
   <tr>
-    <td style="vertical-align:top;"><strong>Contact</strong></td>
+    <td style="vertical-align:top;"><strong>Password</strong><?php if($arrUser['u_id']=='') { ?><span class="required">*</span><?php } ?></td>
     <td style="vertical-align:top;"><strong>:</strong></td>
     <td colspan="4">
-    <input type="text" name="u_contact" id="u_contact" value="<?=$arrUser['u_contact']?>">
+    <input type="password" name="u_password" id="u_password" value="" placeholder="New Password">
+    <input type="password" name="u_password_2" id="u_password_2" value="" placeholder="Confirm New Password">
     </td>
   </tr>
   <tr>
-    <td style="vertical-align:top;"><strong>Role</strong></td>
+    <td style="vertical-align:top;"><strong></strong></td>
+    <td style="vertical-align:top;"><strong></strong></td>
+    <td colspan="4">
+    <input type="button" class="btn btn-small" name="genRandBtn" id="genRandBtn" value="Generate Random Password">
+    <span id="randString"></span>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top;"><strong>Role</strong><span class="required">*</span></td>
     <td style="vertical-align:top;"><strong>:</strong></td>
     <td colspan="4">
     <select name="u_role" id="u_role">
@@ -61,10 +83,10 @@ switch($data['action']) {
     </td>
   </tr>
   <tr>
-    <td style="vertical-align:top;"><strong>Status</strong></td>
+    <td style="vertical-align:top;"><strong>Status</strong><span class="required">*</span></td>
     <td style="vertical-align:top;"><strong>:</strong></td>
     <td colspan="4">
-    <input type="radio" name="u_status" id="u_status" value="A" <?php if($arrUser['u_status']=='A') { ?>checked<?php } ?>> Active
+    <input type="radio" name="u_status" id="u_status" value="A" <?php if($arrUser['u_status']=='A'||$arrUser['u_status']=='') { ?>checked<?php } ?>> Active
     <input type="radio" name="u_status" id="u_status" value="D" <?php if($arrUser['u_status']=='D') { ?>checked<?php } ?>> Inactive
     </td>
   </tr>
@@ -87,8 +109,16 @@ switch($data['action']) {
 		echo $instUser->SaveUser($data);
 		break;
 	}
+	case 'deleteUser': {
+		echo $instUser->DeleteUser($data['u_id']);
+		break;
+	}
 	case 'resetUserPassword': {
 		echo $instUser->ResetUserPassword($data['u_id']);
+		break;
+	}
+	case 'unlockUser': {
+		echo $instUser->UnlockUser($data['u_id']);
 		break;
 	}
 	default: {
