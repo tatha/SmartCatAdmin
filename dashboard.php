@@ -22,7 +22,7 @@
 <h3>Dashboard</h3>
 <ul class="breadcrumb">
   <li>You are here:</li>
-  <li> <a href="index.html" class="tip" title="back to dashboard"> <span class="icon16 icomoon-icon-screen-2"></span> </a> <span class="divider"> <span class="icon16 icomoon-icon-arrow-right-2"></span> </span> </li>
+  <li> <a href="dashboard.html" class="tip" title="Dashboard"> <span class="icon16 icomoon-icon-screen-2"></span> </a> <span class="divider"> <span class="icon16 icomoon-icon-arrow-right-2"></span> </span> </li>
   <li class="active">Dashboard</li>
 </ul>
 </div>
