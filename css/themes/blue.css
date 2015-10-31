@@ -126,14 +126,7 @@ Author : Tathagata Basu
 }
 .mainnav ul li .sub {
 	border-bottom: 1px solid #4796B4;
-    background: #58B8DC;
-    background: -moz-linear-gradient(top, #58B8DC 1%, #4796B4 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#58B8DC), color-stop(100%,#4796B4));
-    background: -webkit-linear-gradient(top, #58B8DC 1%, #4796B4 100%);
-    background: -o-linear-gradient(top, #58B8DC 1%,#4796B4 100%);
-    background: -ms-linear-gradient(top, #58B8DC 1%,#4796B4 100%);
-    background: linear-gradient(top, #58B8DC 1%,#4796B4 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58B8DC', endColorstr='#4796B4',GradientType=0 );
+    background: #3A7C94;
 }
 .mainnav ul li .sub li:first-child a.current {
 	border-top: 1px solid #ffffff;
@@ -156,6 +149,7 @@ Author : Tathagata Basu
     background: linear-gradient(top, #58B8DC 1%,#4796B4 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58B8DC', endColorstr='#4796B4',GradientType=0 );
 	color: #ffffff;
+	border-top: 1px solid #58B8DC;
 }
 .mainnav ul li .sub li a.current {
 	border-top: 1px solid #55B3D6;
