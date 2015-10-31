@@ -11,6 +11,9 @@ body {
 .row-fluid {
     display: inline-block;
 }
+.dataTable {
+	clear: both;
+}
 .table.left thead th, .table.left tbody td {
 	text-align: left;
 }
