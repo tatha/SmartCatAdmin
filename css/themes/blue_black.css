@@ -1,0 +1,230 @@
+/*
+Blue Theme
+-------------------------
+Author : Tathagata Basu
+*/
+
+/* Header */
+#header {
+    background: #222;
+    border-bottom: 1px solid #000000;
+    box-shadow: 0 1px 8px #FFFFFF;
+}
+.navbar .brand {
+	color: #ffffff;
+	text-shadow: 0 1px 0 #08506B;
+}
+.navbar .brand .slogan {
+	color: #ffffff;
+}
+.navbar .nav > li > a {
+    color: #ffffff;
+    -webkit-text-shadow: 0 1px 0 #096385;
+   	   -moz-text-shadow: 0 1px 0 #096385;
+            text-shadow: 0 1px 0 #096385;
+    border-color: #ffffff #ffffff #ffffff;
+    background-color: #555555;
+    -webkit-box-shadow: inset 0 0 1px white;
+       -moz-box-shadow: inset 0 0 1px #fff;
+        -ms-box-shadow: inset 0 0 1px #fff;
+            box-shadow: inset 0 0 1px white;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#555555,EndColorStr=#333333);
+    background-image: -moz-linear-gradient(top,#555555 0,#333333 100%);
+    background-image: -ms-linear-gradient(top,#555555 0,#333333 100%);
+    background-image: -o-linear-gradient(top,#555555 0,#333333 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#555555),color-stop(100%,#333333));
+    background-image: -webkit-linear-gradient(top,#555555 0,#333333 100%);
+    background-image: linear-gradient(to bottom,#555555 0,#333333 100%);
+}
+.navbar .nav li > a:hover {
+	color: #ffffff;
+    border-color: #ffffff #ffffff #ffffff;
+    background-color: #333333;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#333333,EndColorStr=#555555);
+    background-image: -moz-linear-gradient(top,#333333 0,#555555 100%);
+    background-image: -ms-linear-gradient(top,#333333 0,#555555 100%);
+    background-image: -o-linear-gradient(top,#333333 0,#555555 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#333333),color-stop(100%,#555555));
+    background-image: -webkit-linear-gradient(top,#333333 0,#555555 100%);
+    background-image: linear-gradient(to bottom,#333333 0,#555555 100%);
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 0px 3px rgb(255, 255, 255) inset;
+}
+.navbar .nav .active > a {
+	color: #ffffff;
+}
+.navbar .nav .active > a:hover {
+	color: #ffffff;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+	color: #ffffff;
+}
+.dropdown-menu {
+	background: #333333;
+	border: 1px solid #333333;
+}
+.dropdown-menu .menu {
+	background: #555555;
+	border: 1px solid #333333;
+}
+.navbar .dropdown-menu:before {
+	background: url(../../images/arrowup-blue_black.png) no-repeat;!important
+}
+.dropdown-menu li > a {
+	color: #ffffff;
+}
+.navbar .nav li.dropdown ul a:hover {
+	color: #ffffff;
+	text-decoration:none;
+}
+
+/* Sidebar */
+#sidebar .shortcuts, #sidebar-right .shortcuts, .heading {
+    border-bottom: 1px solid #000000;
+    background: #555555;
+    background: -moz-linear-gradient(top, #555555 1%, #333333 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#555555), color-stop(100%,#333333));
+    background: -webkit-linear-gradient(top, #555555 1%, #333333 100%);
+    background: -o-linear-gradient(top, #555555 1%,#333333 100%);
+    background: -ms-linear-gradient(top, #555555 1%,#333333 100%);
+    background: linear-gradient(top, #555555 1%,#333333 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#333333',GradientType=0 );
+    position: relative;
+    -moz-box-shadow: 0 1px 0px #CCCCCC;
+    -webkit-box-shadow: 0 1px 0px #CCCCCC;
+    box-shadow: 0 1px 0px #CCCCCC;
+	color:#ffffff;
+}
+#sidebarbg {
+    background: #555555;
+	border-right: 1px solid #555555;
+}
+.sidebar-widget .title {
+	background: #222222;
+	border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+	-moz-box-shadow: 0 1px 0px #222222;
+	-webkit-box-shadow: 0 1px 0px #222222;
+	box-shadow: 0 1px 0px #222222;
+	color:#ffffff;
+}
+.collapseBtn.leftbar .icon12 {
+    color: #08506B;
+}
+.mainnav li a {
+	border-bottom: 1px solid #555555;
+    border-top: 1px solid #333333;
+	box-shadow: 0 1px 0px #333333;
+	color: #ffffff;
+}
+.mainnav li a:hover {
+	background: #777777;
+    color: #ffffff;
+}
+.mainnav li a.current, 
+.mainnav li a.current:hover {
+	color: #ffffff;
+    background: #0D88B7;
+}
+.mainnav ul li .sub {
+	border-bottom: 1px solid #333333;
+    background: #333333;
+}
+.mainnav ul li .sub li:first-child a {
+	border-top: none;
+	border-bottom: none;
+}
+.mainnav ul li .sub li:first-child a.current {
+	border-top: none;
+	border-bottom: none;
+}
+.mainnav ul li .sub li:first-child a:hover {
+	border-top: none;
+	border-bottom: none;
+}
+.mainnav ul li .sub li:last-child {
+	border-top: none;
+	border-bottom: 1px solid #ffffff;
+}
+.mainnav ul li .sub li:last-child a {
+	border-top: none;
+	border-bottom: none;
+}
+.mainnav ul li .sub li:last-child a:hover {
+	border-top: none;
+	border-bottom: none;
+}
+.mainnav ul li .sub li a {
+	border-top: none;
+	border-bottom: none;
+}
+.mainnav ul li .sub li a:hover {
+	border-top: none;
+	border-bottom: none;
+    background: #777777;
+	color: #ffffff;
+}
+.mainnav ul li .sub li a.current {
+	border-top: none;
+	border-bottom: none;
+	box-shadow: 0 1px 0px #096385;
+	background: #0D88B7;
+    color: #fff;
+}
+.mainnav ul li .sub li a.current:hover {
+	border-top: none;
+	border-bottom: none;
+	background: #0D88B7;
+	color: #fff;
+}
+/* Breadcrumb */
+.breadcrumb > li {
+	color:#ffffff;
+    text-shadow: 0 1px 0 #096385;
+}
+.breadcrumb > .active {
+    color: #ffffff;
+}
+
+/* Icon */
+.nav .icon16,
+.breadcrumb .icon16,
+.mainnav .icon16 {
+    color: #ffffff;
+}
+.mainnav li a.current .icon16, 
+.mainnav li a.current:hover .icon16 {
+	color: #ffffff;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret, 
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret, 
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret, 
+.navbar .nav li.dropdown > a:hover .caret,
+.navbar .nav li.dropdown .dropdown-toggle .caret, 
+.navbar .nav li.dropdown.open .caret {
+	border-top-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+}
+
+/* Box */
+.box {
+	-moz-box-shadow:0 1px 0px rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 1);
+	box-shadow: 0 1px 0px rgba(255, 255, 255, 1);
+}
+.box.hover {
+	-moz-box-shadow:0px 0px 3px rgba(9, 99, 133, 0.2);
+	-webkit-box-shadow: 0px 0px 3px rgba(9, 99, 133, 0.2);
+	box-shadow: 0px 0px 3px rgba(9, 99, 133, 0.2);
+}
+.box .title {
+	background: #999999;
+	color: #ffffff;
+	border: 1px solid #333333;
+}
+.box .title .minimize {
+	background: url(../../images/icons/minus.png) no-repeat center 3px #AAE8FF;
+}
+.box .content {
+	border: 1px solid #333333;
+}
+
