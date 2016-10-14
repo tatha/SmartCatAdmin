@@ -1,8 +1,8 @@
 <title>Smart Cat</title>
 <meta charset="utf-8">
-<meta name="author" content="SuggeElson" />
-<meta name="description" content="Online Tutor" />
-<meta name="keywords" content="Online Tutor" />
+<meta name="author" content="TathagataBasu" />
+<meta name="description" content="Smart Cat" />
+<meta name="keywords" content="Smart Cat" />
 
 <!-- Mobile Specific Metas -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
