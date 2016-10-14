@@ -15,7 +15,7 @@
 
 define('HOSTNAME','localhost');
 define('DB_USER','root');
-define('DB_PASS','');
+define('DB_PASS','compaq');
 define('DBNAME','smartcatadmin');
 
 //max number of failed password in loging
@@ -36,6 +36,6 @@ define('DB_PREFIX', 'sca');
 define('NULL_DATE', '0000-00-00 00:00:00');
 
 //Theme
-define('THEME', 'blue');
+define('THEME', 'sky');
 
 ?>
