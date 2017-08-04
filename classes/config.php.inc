@@ -15,7 +15,7 @@
 
 define('HOSTNAME','localhost');
 define('DB_USER','root');
-define('DB_PASS','compaq');
+define('DB_PASS','');
 define('DBNAME','smartcatadmin');
 
 //max number of failed password in loging

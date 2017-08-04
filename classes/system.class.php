@@ -28,7 +28,7 @@ class system extends db {
 			if($view[$arrMenu['m_id']]==1) { $v = 1; } else { $v = 0; }
 			if($resPerm->num_rows == 0) {
 				//Insert
-				$this->db->query("INSERT INTO ".DB_PREFIX."_menu_perm(mp_id, mp_roleid, mp_menuid, mp_view, mp_update_by, mp_update_on, mp_update_from) VALUES('', '".$r_id."', '".$arrMenu['m_id']."', '".$v."', '".$_SESSION[DB_PREFIX]['u_id']."', '".date('Y-m-d H:i:s')."', '".$_SERVER['REMOTE_ADDR']."')");
+				$this->db->query("INSERT INTO ".DB_PREFIX."_menu_perm(mp_roleid, mp_menuid, mp_view, mp_update_by, mp_update_on, mp_update_from) VALUES('".$r_id."', '".$arrMenu['m_id']."', '".$v."', '".$_SESSION[DB_PREFIX]['u_id']."', '".date('Y-m-d H:i:s')."', '".$_SERVER['REMOTE_ADDR']."')");
 			} else {
 				//Update
 				$this->db->query("UPDATE ".DB_PREFIX."_menu_perm SET mp_view = '".$v."', mp_update_by = '".$_SESSION[DB_PREFIX]['u_id']."', mp_update_on = '".date('Y-m-d H:i:s')."', mp_update_from = '".$_SERVER['REMOTE_ADDR']."' WHERE mp_roleid = '".$r_id."' AND mp_menuid = '".$arrMenu['m_id']."'");
