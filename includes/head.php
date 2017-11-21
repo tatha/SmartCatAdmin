@@ -5,5 +5,7 @@ require_once('classes/system.class.php');
 $instSys = new system;
 require_once('classes/auth.class.php');
 $instAuth = new auth;
+require_once('classes/app.class.php');
+$instApp = new app;
 require_once('includes/page_security.php');
 ?>
